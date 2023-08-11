@@ -10,9 +10,9 @@ import SwiftUI
 struct SignedInTabView: View {
     var body: some View {
         TabView {
-            Text("Upcoming")
+            Text("Home")
                 .tabItem {
-                    Label("Upcoming", systemImage: "house")
+                    Label("Home", systemImage: "house")
                 }
             
             Text("Search")
@@ -25,10 +25,37 @@ struct SignedInTabView: View {
                     Label("Clubs", systemImage: "person.3")
                 }
             
-            Text("Profile")
+            ProfileView()
                 .tabItem {
-                    Label("Profile", systemImage: "person")
+                    Label("Profile", systemImage: "person.circle")
                 }
+        }
+    }
+}
+
+struct ProfileView: View {
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack {
+                    
+                }
+                .padding()
+            }
+            .navigationTitle("Profile")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(
+                        action: {
+                            
+                        },
+                        label: {
+                            Image(systemName: "gear")
+                        }
+                    )
+                }
+            }
         }
     }
 }

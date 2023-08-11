@@ -18,7 +18,8 @@ class Event: Object, Identifiable {
         date: Date,
         postedAt: Date,
         attending: [User],
-        location: String
+        location: String,
+        isPrivate: Bool
     ) {
         self.init()
         self.title = title
@@ -29,6 +30,7 @@ class Event: Object, Identifiable {
         self.postedAt = postedAt
         self.attending.append(objectsIn: attending)
         self.location = location
+        self.isPrivate = isPrivate
     }
     
     @Persisted(primaryKey: true) var _id: ObjectId
@@ -48,6 +50,8 @@ class Event: Object, Identifiable {
     @Persisted var attending: List<User> = List()
     
     @Persisted var location: String
+    
+    @Persisted var isPrivate: Bool
 }
 
 #if DEBUG
@@ -63,7 +67,8 @@ extension Event {
             attending: [
                 .kevinBarnes
             ],
-            location: "Engineering Building 2 Room 5"
+            location: "Engineering Building 2 Room 5",
+            isPrivate: false
         )
     }
     
