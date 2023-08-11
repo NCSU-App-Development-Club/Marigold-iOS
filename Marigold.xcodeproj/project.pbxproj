@@ -7,18 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450C5BA42A7DA742005353EC /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450C5BA32A7DA742005353EC /* WelcomeView.swift */; };
+		450C5BA72A7DC9E0005353EC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450C5BA62A7DC9E0005353EC /* SignUpView.swift */; };
+		450C5BAB2A7DCC3F005353EC /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 450C5BAA2A7DCC3F005353EC /* Localizable.xcstrings */; };
+		450C5BAD2A7DCFBB005353EC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450C5BAC2A7DCFBB005353EC /* SignInView.swift */; };
+		450C5BAF2A7DD0A1005353EC /* OpenRealmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450C5BAE2A7DD0A1005353EC /* OpenRealmView.swift */; };
+		450C5BB12A7DD125005353EC /* SignedInTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450C5BB02A7DD125005353EC /* SignedInTabView.swift */; };
 		453E439E2A6DF4BC00366A25 /* MarigoldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453E439D2A6DF4BC00366A25 /* MarigoldApp.swift */; };
 		453E43A02A6DF4BC00366A25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453E439F2A6DF4BC00366A25 /* ContentView.swift */; };
 		453E43A22A6DF4BE00366A25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453E43A12A6DF4BE00366A25 /* Assets.xcassets */; };
 		453E43A52A6DF4BE00366A25 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453E43A42A6DF4BE00366A25 /* Preview Assets.xcassets */; };
+		453E43AE2A6DF4FC00366A25 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 453E43AD2A6DF4FC00366A25 /* Realm */; };
+		453E43B02A6DF4FC00366A25 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 453E43AF2A6DF4FC00366A25 /* RealmSwift */; };
+		453E43B22A6DF52000366A25 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453E43B12A6DF52000366A25 /* User.swift */; };
+		453E43B42A6DF64600366A25 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453E43B32A6DF64600366A25 /* School.swift */; };
+		453E43B62A6DF6AB00366A25 /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453E43B52A6DF6AB00366A25 /* Club.swift */; };
+		453E43B82A6DF7CF00366A25 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453E43B72A6DF7CF00366A25 /* Event.swift */; };
+		453E43BB2A6DFBAD00366A25 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453E43BA2A6DFBAD00366A25 /* CardView.swift */; };
+		453E43BD2A6E1D5900366A25 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453E43BC2A6E1D5900366A25 /* EventsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		450C5BA32A7DA742005353EC /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		450C5BA62A7DC9E0005353EC /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		450C5BAA2A7DCC3F005353EC /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		450C5BAC2A7DCFBB005353EC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		450C5BAE2A7DD0A1005353EC /* OpenRealmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenRealmView.swift; sourceTree = "<group>"; };
+		450C5BB02A7DD125005353EC /* SignedInTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInTabView.swift; sourceTree = "<group>"; };
 		453E439A2A6DF4BC00366A25 /* Marigold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marigold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		453E439D2A6DF4BC00366A25 /* MarigoldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarigoldApp.swift; sourceTree = "<group>"; };
 		453E439F2A6DF4BC00366A25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		453E43A12A6DF4BE00366A25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		453E43A42A6DF4BE00366A25 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		453E43B12A6DF52000366A25 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		453E43B32A6DF64600366A25 /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		453E43B52A6DF6AB00366A25 /* Club.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
+		453E43B72A6DF7CF00366A25 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		453E43BA2A6DFBAD00366A25 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		453E43BC2A6E1D5900366A25 /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +52,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				453E43B02A6DF4FC00366A25 /* RealmSwift in Frameworks */,
+				453E43AE2A6DF4FC00366A25 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		450C5BA52A7DC9D5005353EC /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				450C5BA62A7DC9E0005353EC /* SignUpView.swift */,
+				450C5BAC2A7DCFBB005353EC /* SignInView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		453E43912A6DF4BC00366A25 = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +88,11 @@
 		453E439C2A6DF4BC00366A25 /* Marigold */ = {
 			isa = PBXGroup;
 			children = (
+				453E43B92A6DFBA400366A25 /* View */,
+				453E43AB2A6DF4D100366A25 /* Model */,
 				453E439D2A6DF4BC00366A25 /* MarigoldApp.swift */,
-				453E439F2A6DF4BC00366A25 /* ContentView.swift */,
 				453E43A12A6DF4BE00366A25 /* Assets.xcassets */,
+				450C5BAA2A7DCC3F005353EC /* Localizable.xcstrings */,
 				453E43A32A6DF4BE00366A25 /* Preview Content */,
 			);
 			path = Marigold;
@@ -65,6 +104,31 @@
 				453E43A42A6DF4BE00366A25 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		453E43AB2A6DF4D100366A25 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				453E43B12A6DF52000366A25 /* User.swift */,
+				453E43B32A6DF64600366A25 /* School.swift */,
+				453E43B52A6DF6AB00366A25 /* Club.swift */,
+				453E43B72A6DF7CF00366A25 /* Event.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		453E43B92A6DFBA400366A25 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				450C5BA52A7DC9D5005353EC /* Auth */,
+				453E439F2A6DF4BC00366A25 /* ContentView.swift */,
+				453E43BA2A6DFBAD00366A25 /* CardView.swift */,
+				453E43BC2A6E1D5900366A25 /* EventsView.swift */,
+				450C5BA32A7DA742005353EC /* WelcomeView.swift */,
+				450C5BAE2A7DD0A1005353EC /* OpenRealmView.swift */,
+				450C5BB02A7DD125005353EC /* SignedInTabView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +147,10 @@
 			dependencies = (
 			);
 			name = Marigold;
+			packageProductDependencies = (
+				453E43AD2A6DF4FC00366A25 /* Realm */,
+				453E43AF2A6DF4FC00366A25 /* RealmSwift */,
+			);
 			productName = Marigold;
 			productReference = 453E439A2A6DF4BC00366A25 /* Marigold.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +179,9 @@
 				Base,
 			);
 			mainGroup = 453E43912A6DF4BC00366A25;
+			packageReferences = (
+				453E43AC2A6DF4FC00366A25 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 453E439B2A6DF4BC00366A25 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +198,7 @@
 			files = (
 				453E43A52A6DF4BE00366A25 /* Preview Assets.xcassets in Resources */,
 				453E43A22A6DF4BE00366A25 /* Assets.xcassets in Resources */,
+				450C5BAB2A7DCC3F005353EC /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +209,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				450C5BAF2A7DD0A1005353EC /* OpenRealmView.swift in Sources */,
+				453E43BB2A6DFBAD00366A25 /* CardView.swift in Sources */,
 				453E43A02A6DF4BC00366A25 /* ContentView.swift in Sources */,
 				453E439E2A6DF4BC00366A25 /* MarigoldApp.swift in Sources */,
+				450C5BB12A7DD125005353EC /* SignedInTabView.swift in Sources */,
+				453E43BD2A6E1D5900366A25 /* EventsView.swift in Sources */,
+				450C5BA42A7DA742005353EC /* WelcomeView.swift in Sources */,
+				453E43B62A6DF6AB00366A25 /* Club.swift in Sources */,
+				450C5BA72A7DC9E0005353EC /* SignUpView.swift in Sources */,
+				453E43B22A6DF52000366A25 /* User.swift in Sources */,
+				453E43B82A6DF7CF00366A25 /* Event.swift in Sources */,
+				450C5BAD2A7DCFBB005353EC /* SignInView.swift in Sources */,
+				453E43B42A6DF64600366A25 /* School.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +427,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		453E43AC2A6DF4FC00366A25 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		453E43AD2A6DF4FC00366A25 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 453E43AC2A6DF4FC00366A25 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		453E43AF2A6DF4FC00366A25 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 453E43AC2A6DF4FC00366A25 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 453E43922A6DF4BC00366A25 /* Project object */;
 }

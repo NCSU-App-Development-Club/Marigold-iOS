@@ -1,0 +1,51 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Clubs" : {
+
+    },
+    "Confirm Password" : {
+
+    },
+    "Create Account" : {
+
+    },
+    "Email" : {
+
+    },
+    "Failed to create account. Please try again." : {
+
+    },
+    "Failed to sign in." : {
+
+    },
+    "Hey" : {
+
+    },
+    "Password" : {
+
+    },
+    "Profile" : {
+
+    },
+    "Search" : {
+
+    },
+    "Sign In" : {
+      "comment" : "Title at the top of the sign in view."
+    },
+    "Sign Up" : {
+      "comment" : "Title at the top of the sign up view."
+    },
+    "Upcoming" : {
+
+    },
+    "Upcoming Events" : {
+
+    },
+    "Welcome to project Marigold!" : {
+
+    }
+  },
+  "version" : "1.0"
+}
