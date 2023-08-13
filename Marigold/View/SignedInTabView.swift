@@ -33,33 +33,6 @@ struct SignedInTabView: View {
     }
 }
 
-struct ProfileView: View {
-    var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack {
-                    
-                }
-                .padding()
-            }
-            .navigationTitle("Profile")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(
-                        action: {
-                            
-                        },
-                        label: {
-                            Image(systemName: "gear")
-                        }
-                    )
-                }
-            }
-        }
-    }
-}
-
 #Preview {
     SignedInTabView()
 }

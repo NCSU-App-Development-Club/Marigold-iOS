@@ -31,7 +31,3 @@ struct OpenRealmView: View {
         }
     }
 }
-
-#Preview {
-    OpenRealmView()
-}
