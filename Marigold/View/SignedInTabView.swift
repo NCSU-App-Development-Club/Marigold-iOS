@@ -25,7 +25,7 @@ struct SignedInTabView: View {
                     Label("Clubs", systemImage: "person.3")
                 }
             
-            ProfileView()
+            Text("")
                 .tabItem {
                     Label("Profile", systemImage: "person.circle")
                 }

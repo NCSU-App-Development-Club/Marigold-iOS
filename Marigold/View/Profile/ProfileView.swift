@@ -12,6 +12,9 @@ struct ProfileView: View {
     
     @EnvironmentObject private var app: RealmSwift.App
     
+    @ObservedRealmObject var user: User
+    
+    @State private var isEditing: Bool = false
     @State private var failedToSignOut: Bool = false
     @State private var confirmDeleteAccount: Bool = false
     @State private var failedToDeleteAccount: Bool = false
@@ -19,14 +22,28 @@ struct ProfileView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack {
-                    Text("Profile")
+                if isEditing {
+                    EditView(user: user)
+                } else {
+                    NormalView(user: user)
                 }
-                .padding()
             }
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(
+                        action: {
+                            withAnimation(.easeInOut) {
+                                isEditing.toggle()
+                            }
+                        },
+                        label: {
+                            Image(systemName: "square.and.pencil")
+                        }
+                    )
+                }
+                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Menu(
                         content: {
@@ -102,7 +119,7 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView()
+    ProfileView(user: User.kevinBarnes)
         .environmentObject(
             App(
                 id: "marigold-ysffq",
@@ -114,4 +131,69 @@ struct ProfileView: View {
                 )
             )
         )
+}
+
+struct NormalView: View {
+    
+    @ObservedRealmObject var user: User
+    
+    var body: some View {
+        VStack {
+            AsyncImage(
+                url: URL(string: user.profileImageUrl)!,
+                content: { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200, alignment: .center)
+                        .clipShape(Circle())
+                },
+                placeholder: {
+                    ProgressView()
+                }
+            )
+            
+            Text("\(user.firstName) \(user.lastName)")
+                .font(.largeTitle)
+                .fontWeight(.semibold)
+            
+            Text(user.email)
+                .fontWeight(.light)
+        }
+        .padding()
+    }
+}
+
+struct EditView: View {
+    
+    @ObservedRealmObject var user: User
+    
+    var body: some View {
+        VStack {
+            AsyncImage(
+                url: URL(string: user.profileImageUrl)!,
+                content: { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200, alignment: .center)
+                        .clipShape(Circle())
+                },
+                placeholder: {
+                    ProgressView()
+                }
+            )
+            
+            HStack {
+                Text("First Name: ")
+                
+                TextField("First Name", text: $user.firstName)
+                    .textFieldStyle(.roundedBorder)
+            }
+            
+//            Text(user.email)
+//                .fontWeight(.light)
+        }
+        .padding()
+    }
 }

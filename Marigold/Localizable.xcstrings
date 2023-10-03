@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Are you sure you want to delete your account? This action cannot be undone." : {
+
+    },
     "Clubs" : {
 
     },
@@ -10,19 +13,40 @@
     "Create Account" : {
 
     },
+    "Delete Account" : {
+
+    },
+    "Delete Account?" : {
+
+    },
     "Email" : {
 
     },
     "Failed to create account. Please try again." : {
 
     },
+    "Failed To Delete Account" : {
+
+    },
     "Failed to sign in." : {
+
+    },
+    "Failed To Sign Out" : {
 
     },
     "Hey" : {
 
     },
+    "Home" : {
+
+    },
+    "Keep Account" : {
+
+    },
     "Password" : {
+
+    },
+    "Please try again." : {
 
     },
     "Profile" : {
@@ -34,11 +58,11 @@
     "Sign In" : {
       "comment" : "Title at the top of the sign in view."
     },
+    "Sign Out" : {
+
+    },
     "Sign Up" : {
       "comment" : "Title at the top of the sign up view."
-    },
-    "Upcoming" : {
-
     },
     "Upcoming Events" : {
 

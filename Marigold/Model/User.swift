@@ -96,7 +96,7 @@ extension User {
             notifications: [
                 
             ],
-            profileImageUrl: ""
+            profileImageUrl: "https://avatars.githubusercontent.com/u/38760777?v=4"
         )
     }
 }
