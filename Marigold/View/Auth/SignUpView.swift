@@ -8,6 +8,26 @@
 import RealmSwift
 import SwiftUI
 
+struct ToggleableTextField: View {
+    @State private var isSecureField: Bool = true
+    var placeholder:String
+    @Binding var text:String
+    
+    var body: some View{
+        HStack{
+            if isSecureField{
+                SecureField(placeholder,text:$text)
+            }else{
+                TextField(text,text:$text)
+            }
+        }.overlay(alignment: .trailing){
+            Image(systemName: isSecureField ? "eye.slash":"eye").onTapGesture {
+                isSecureField.toggle()
+            }
+        }
+    }
+}
+
 struct SignUpView: View {
     
     @EnvironmentObject private var app: RealmSwift.App
@@ -25,11 +45,9 @@ struct SignUpView: View {
                 TextField("Email", text: $email)
                     .textInputAutocapitalization(.never)
                 
-                SecureField("Password", text: $password)
-                    .textContentType(nil)
-                
-                SecureField("Confirm Password", text: $confirmPassword)
-                    .textContentType(nil)
+                ToggleableTextField(placeholder:"Password",text:$password).textContentType(nil)
+
+                ToggleableTextField(placeholder:"Confirm Password", text: $confirmPassword).textContentType(nil)
                 
                 Button(
                     action: {

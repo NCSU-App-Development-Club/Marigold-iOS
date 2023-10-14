@@ -24,8 +24,7 @@ struct SignInView: View {
                 TextField("Email", text: $email)
                     .textInputAutocapitalization(.never)
                 
-                SecureField("Password", text: $password)
-                    .textContentType(nil)
+                ToggleableTextField(placeholder:"Password",text:$password).textContentType(nil)
                 
                 Button(
                     action: {
