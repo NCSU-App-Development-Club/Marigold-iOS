@@ -18,6 +18,7 @@ struct SignUpView: View {
     
     @State private var creatingAccount: Bool = false
     @State private var failedToCreateAccount: Bool = false
+    @State private var showPasswordAlert: Bool = false
     
     var body: some View {
         ScrollView {
@@ -57,12 +58,46 @@ struct SignUpView: View {
         }
         .navigationTitle(Text("Sign Up", comment: "Title at the top of the sign up view."))
         .navigationBarTitleDisplayMode(.inline)
+        .alert("Password must be at least 8 characters, include a capital letter, and a number.", isPresented: $showPasswordAlert) {
+            Button("OK", role: .cancel) { }
+        }
+
     }
     
+    func isPasswordValid(_ password: String) -> Bool {
+        let minimumLength = 8
+        
+        guard password.count >= minimumLength else {
+            showPasswordAlert = true
+            return false
+        }
+        
+        let capitalLetterRegEx  = ".*[A-Z]+.*"
+        let isCapitalLetter = NSPredicate(format:"SELF MATCHES %@", capitalLetterRegEx)
+        guard isCapitalLetter.evaluate(with: password) else {
+            showPasswordAlert = true
+            return false
+        }
+        
+        let numberRegEx  = ".*[0-9]+.*"
+        let isNumber = NSPredicate(format:"SELF MATCHES %@", numberRegEx)
+        guard isNumber.evaluate(with: password) else {
+            showPasswordAlert = true
+            return false
+        }
+        
+        return true
+    }
+
     func createAccount() {
         if creatingAccount {
             return
         }
+        
+        guard isPasswordValid(password) else {
+                // Alert will show because showPasswordAlert is set to true in isPasswordValid function
+                return
+            }
         
         creatingAccount = true
         
