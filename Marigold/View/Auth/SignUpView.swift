@@ -12,7 +12,7 @@ struct ToggleableTextField: View {
     @State private var isSecureField: Bool = true
     var placeholder:String
     @Binding var text:String
-    
+
     var body: some View{
         HStack{
             if isSecureField{
@@ -34,8 +34,10 @@ struct SignUpView: View {
     
     @State private var email: String = ""
     @State private var password: String = ""
+    @FocusState var passwordFocus: Bool
     @State private var confirmPassword: String = ""
-    
+    @FocusState var confirmFocus: Bool
+
     @State private var creatingAccount: Bool = false
     @State private var failedToCreateAccount: Bool = false
     
@@ -45,9 +47,45 @@ struct SignUpView: View {
                 TextField("Email", text: $email)
                     .textInputAutocapitalization(.never)
                 
-                ToggleableTextField(placeholder:"Password",text:$password).textContentType(nil)
+                VStack(alignment: .leading) {
+                    ToggleableTextField(placeholder:"Password",text:$password)
+                        .textContentType(nil)
+                        .focused($passwordFocus)
+                    if passwordFocus {
+                        HStack{
+                            Text("Your password must contain at least:")
+                                .foregroundColor(.gray)
+                                .font(.system(size: 14))
+                                .padding(.leading, 5)
+                        }
+                        Group {
+                            Text("• 8 characters")
+                                .foregroundColor(self.passwordRequirements[0] ? .green : .red)
+                            Text("• 1 number")
+                                .foregroundColor(self.passwordRequirements[1] ? .green : .red)
+                            Text("• 1 capital letter")
+                                .foregroundColor(self.passwordRequirements[2] ? .green : .red)
+                        }
+                        .padding(.leading, 8)
+                        .font(.system(size: 12))
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
 
-                ToggleableTextField(placeholder:"Confirm Password", text: $confirmPassword).textContentType(nil)
+                VStack(alignment: .leading) {
+                    ToggleableTextField(placeholder:"Confirm Password", text: $confirmPassword)
+                        .textContentType(nil)
+                        .focused($confirmFocus)
+                    if confirmFocus {
+                        HStack{
+                            Text("Passwords must match")
+                                .foregroundColor(confirmPassword == password ? .green : .red)
+                                .font(.system(size: 14))
+                                .padding(.leading, 5)
+                        }
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
                 
                 Button(
                     action: {
@@ -66,7 +104,7 @@ struct SignUpView: View {
                         .frame(maxWidth: .infinity)
                     }
                 )
-                .disabled(email.isEmpty || password.isEmpty || password != confirmPassword)
+                .disabled(email.isEmpty || password.isEmpty || password != confirmPassword || !validPassword())
                 .buttonStyle(.borderedProminent)
                 .alert("Failed to create account. Please try again.", isPresented: $failedToCreateAccount, actions: {})
             }
@@ -94,7 +132,33 @@ struct SignUpView: View {
             }
         }
     }
+
+    private var passwordRequirements: Array<Bool> {
+        [
+            password.count >= 8,
+            password &= "[0-9]",
+            password &= "[A-Z]"
+        ]
+    }
+
+    func validPassword() -> Bool {
+        for condition in passwordRequirements {
+            if !condition {
+                return false
+            }
+        }
+        return true
+    }
+
 }
+
+extension String {
+    // Function that can be used as an operator against a string to check whether it contains the regex
+    static func &= (leftSide: String, rightSide: String) -> Bool {
+        return leftSide.range(of: rightSide, options: .regularExpression) != nil
+    }
+}
+
 
 #Preview {
     NavigationStack {
