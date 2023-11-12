@@ -37,7 +37,7 @@ struct SignUpView: View {
     @FocusState var passwordFocus: Bool
     @State private var confirmPassword: String = ""
     @FocusState var confirmFocus: Bool
-
+    
     @State private var creatingAccount: Bool = false
     @State private var failedToCreateAccount: Bool = false
     
@@ -71,7 +71,7 @@ struct SignUpView: View {
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-
+                
                 VStack(alignment: .leading) {
                     ToggleableTextField(placeholder:"Confirm Password", text: $confirmPassword)
                         .textContentType(nil)
@@ -104,7 +104,7 @@ struct SignUpView: View {
                         .frame(maxWidth: .infinity)
                     }
                 )
-                .disabled(email.isEmpty || password.isEmpty || password != confirmPassword || !validPassword())
+                .disabled(email.isEmpty || password.isEmpty || password != confirmPassword || !isPasswordValid())
                 .buttonStyle(.borderedProminent)
                 .alert("Failed to create account. Please try again.", isPresented: $failedToCreateAccount, actions: {})
             }
@@ -132,16 +132,23 @@ struct SignUpView: View {
             }
         }
     }
+    
+    private var passwordRequirements: [Bool] {
+        let minimumLength = 8
+        let capitalLetterRegEx = ".*[A-Z]+.*"
+        let numberRegEx = ".*[0-9]+.*"
 
-    private var passwordRequirements: Array<Bool> {
-        [
-            password.count >= 8,
-            password &= "[0-9]",
-            password &= "[A-Z]"
+        let isCapitalLetter = NSPredicate(format: "SELF MATCHES %@", capitalLetterRegEx)
+        let isNumber = NSPredicate(format: "SELF MATCHES %@", numberRegEx)
+
+        return [
+            password.count >= minimumLength,
+            isNumber.evaluate(with: password),
+            isCapitalLetter.evaluate(with: password)
         ]
     }
-
-    func validPassword() -> Bool {
+    
+    func isPasswordValid() -> Bool {
         for condition in passwordRequirements {
             if !condition {
                 return false
@@ -149,16 +156,8 @@ struct SignUpView: View {
         }
         return true
     }
-
+    
 }
-
-extension String {
-    // Function that can be used as an operator against a string to check whether it contains the regex
-    static func &= (leftSide: String, rightSide: String) -> Bool {
-        return leftSide.range(of: rightSide, options: .regularExpression) != nil
-    }
-}
-
 
 #Preview {
     NavigationStack {
