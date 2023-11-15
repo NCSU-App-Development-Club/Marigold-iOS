@@ -10,7 +10,7 @@ import SwiftUI
 struct SignedInTabView: View {
     var body: some View {
         TabView {
-            HomeView()
+            Text("Home")
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
@@ -20,7 +20,7 @@ struct SignedInTabView: View {
                     Label("Search", systemImage: "magnifyingglass")
                 }
             
-            Text("Clubs")
+            HomeView()
                 .tabItem {
                     Label("Clubs", systemImage: "person.3")
                 }
