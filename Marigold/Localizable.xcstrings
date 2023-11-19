@@ -1,6 +1,19 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
+    "%@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@"
+          }
+        }
+      }
+    },
     "Are you sure you want to delete your account? This action cannot be undone." : {
 
     },
@@ -19,6 +32,9 @@
     "Delete Account?" : {
 
     },
+    "Don't have an account? " : {
+
+    },
     "Email" : {
 
     },
@@ -34,6 +50,12 @@
     "Failed To Sign Out" : {
 
     },
+    "First Name" : {
+
+    },
+    "First Name: " : {
+
+    },
     "Hey" : {
 
     },
@@ -41,6 +63,12 @@
 
     },
     "Keep Account" : {
+
+    },
+    "Marigold @" : {
+
+    },
+    "NC State University" : {
 
     },
     "Password" : {
@@ -61,13 +89,16 @@
     "Sign Out" : {
 
     },
+    "Sign up" : {
+
+    },
     "Sign Up" : {
       "comment" : "Title at the top of the sign up view."
     },
     "Upcoming Events" : {
 
     },
-    "Welcome to project Marigold!" : {
+    "Welcome Back!" : {
 
     }
   },
