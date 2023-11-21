@@ -3,6 +3,7 @@
 //  Marigold
 //
 //  Created by Kevin Barnes on 8/4/23.
+//  Modified by Carolina Bolnykh
 //
 
 import SwiftUI
@@ -11,32 +12,66 @@ struct WelcomeView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
-                Text("Welcome to project Marigold!")
+                HStack() {
+                    Text("Marigold @")
+                        .font(.system(size: 35, weight: .bold))
+                        .foregroundColor(.black)
+                        .padding(.top, 100)
+                }
+                HStack() {
+                    Text("NC State University")
+                        .font(.system(size: 35, weight: .bold))
+                        .foregroundColor(.red)
+                }
                 
-                NavigationLink(
-                    destination: {
-                        SignUpView()
-                    },
-                    label: {
-                        Text("Create Account")
-                    }
-                )
-                .buttonStyle(.borderedProminent)
+                HStack() {
+                    Text("Welcome Back!")
+                        .font(.system(size: 30, weight: .semibold))
+                        .foregroundColor(.black)
+                        .padding(.top, 75)
+                }
                 
+                HStack() {
+                    NavigationLink(
+                        destination: SignUpView(),
+                        label: {
+                            Text("Don't have an account? ")
+                                .font(.system(size: 15, weight: .semibold))
+                                .foregroundColor(.black)
+                            +
+                            Text("Sign up")
+                                .font(.system(size: 15, weight: .semibold))
+                                .foregroundColor(.blue)
+                                .underline()
+                        }
+                    )
+                    
+                }
                 NavigationLink(
-                    destination: {
-                        SignInView()
-                    },
+                    destination: SignInView(),
                     label: {
                         Text("Sign In")
+                            .font(.system(size: 18, weight: .semibold))
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .foregroundColor(Color.yellow)
+                                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                            )
                     }
                 )
-                .buttonStyle(.bordered)
+                .padding(.top, 200)
+                
+                Spacer()
             }
+            .background(
+                Image("ncsu-talley")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .opacity(0.5)
+            )
         }
     }
-}
-
-#Preview {
-    WelcomeView()
 }
