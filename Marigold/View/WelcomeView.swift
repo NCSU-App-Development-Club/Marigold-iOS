@@ -47,21 +47,9 @@ struct WelcomeView: View {
                     )
                     
                 }
-                NavigationLink(
-                    destination: SignInView(),
-                    label: {
-                        Text("Sign In")
-                            .font(.system(size: 18, weight: .semibold))
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .foregroundColor(Color.yellow)
-                                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                            )
-                    }
-                )
+                NavigationLink(destination: SignInView()) {
+                    TextButtonView(text: "Sign In")
+                }
                 .padding(.top, 200)
                 
                 Spacer()
@@ -74,4 +62,8 @@ struct WelcomeView: View {
             )
         }
     }
+}
+
+#Preview {
+    WelcomeView()
 }
