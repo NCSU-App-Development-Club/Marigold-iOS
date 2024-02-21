@@ -91,7 +91,7 @@ extension Club {
             events: [
                 
             ],
-            imageUrl: "https://appinventiv.com/wp-content/uploads/sites/1/2021/12/Mobile-App-Development-for-Businesses-01.webp"
+            imageUrl: "https://se-images.campuslabs.com/clink/images/cb91ed74-19da-4075-9df2-a33fa5e3ef595cec3f9a-b48a-45c7-b092-d6ec3882cf62.jpg?preset=med-sq"
         )
     }
 }

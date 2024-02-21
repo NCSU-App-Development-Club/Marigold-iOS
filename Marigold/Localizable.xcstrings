@@ -62,6 +62,9 @@
     "Delete Account?" : {
 
     },
+    "Don't have an account? " : {
+
+    },
     "Email" : {
 
     },
@@ -99,6 +102,13 @@
 
     },
     "Memberships" : {
+    "Marigold @" : {
+
+    },
+    "NC State University" : {
+
+    },
+    "Password" : {
 
     },
     "Please try again." : {
@@ -116,13 +126,16 @@
     "Sign Out" : {
 
     },
+    "Sign up" : {
+
+    },
     "Sign Up" : {
       "comment" : "Title at the top of the sign up view."
     },
     "Upcoming Events" : {
 
     },
-    "Welcome to project Marigold!" : {
+    "Welcome Back!" : {
 
     }
   },
