@@ -14,16 +14,28 @@
         }
       }
     },
+    "• 1 capital letter" : {
+
+    },
+    "• 1 number" : {
+
+    },
+    "• 8 characters" : {
+
+    },
     "Are you sure you want to delete your account? This action cannot be undone." : {
 
     },
     "Clubs" : {
 
     },
-    "Confirm Password" : {
+    "Create Account" : {
 
     },
-    "Create Account" : {
+    "Create Event" : {
+
+    },
+    "Create Post" : {
 
     },
     "Delete Account" : {
@@ -71,7 +83,7 @@
     "NC State University" : {
 
     },
-    "Password" : {
+    "Passwords must match" : {
 
     },
     "Please try again." : {
@@ -98,7 +110,13 @@
     "Upcoming Events" : {
 
     },
+    "Vice President" : {
+
+    },
     "Welcome Back!" : {
+
+    },
+    "Your password must contain at least:" : {
 
     }
   },
