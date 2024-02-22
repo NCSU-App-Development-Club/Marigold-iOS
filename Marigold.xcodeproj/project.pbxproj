@@ -100,7 +100,6 @@
 				453E43A12A6DF4BE00366A25 /* Assets.xcassets */,
 				450C5BAA2A7DCC3F005353EC /* Localizable.xcstrings */,
 				453E43A32A6DF4BE00366A25 /* Preview Content */,
-				FE1144852B87CF4800BECEA8 /* ClubCardView.swift */,
 			);
 			path = Marigold;
 			sourceTree = "<group>";
@@ -130,6 +129,7 @@
 				454681EB2A8995400033B8D3 /* Profile */,
 				450C5BA52A7DC9D5005353EC /* Auth */,
 				453E439F2A6DF4BC00366A25 /* ContentView.swift */,
+				FE1144852B87CF4800BECEA8 /* ClubCardView.swift */,
 				453E43BA2A6DFBAD00366A25 /* CardView.swift */,
 				453E43BC2A6E1D5900366A25 /* EventsView.swift */,
 				450C5BA32A7DA742005353EC /* WelcomeView.swift */,
