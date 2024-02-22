@@ -27,6 +27,7 @@
 		453E43BD2A6E1D5900366A25 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453E43BC2A6E1D5900366A25 /* EventsView.swift */; };
 		454681ED2A89955D0033B8D3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454681EC2A89955D0033B8D3 /* ProfileView.swift */; };
 		DEBF7C942B84710B00A82249 /* EventCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF7C932B84710B00A82249 /* EventCardView.swift */; };
+		FE1144862B87CF4800BECEA8 /* ClubCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1144852B87CF4800BECEA8 /* ClubCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		453E43BC2A6E1D5900366A25 /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		454681EC2A89955D0033B8D3 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		DEBF7C932B84710B00A82249 /* EventCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardView.swift; sourceTree = "<group>"; };
+		FE1144852B87CF4800BECEA8 /* ClubCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				453E43A12A6DF4BE00366A25 /* Assets.xcassets */,
 				450C5BAA2A7DCC3F005353EC /* Localizable.xcstrings */,
 				453E43A32A6DF4BE00366A25 /* Preview Content */,
+				FE1144852B87CF4800BECEA8 /* ClubCardView.swift */,
 			);
 			path = Marigold;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				453E43BD2A6E1D5900366A25 /* EventsView.swift in Sources */,
 				450C5BA42A7DA742005353EC /* WelcomeView.swift in Sources */,
 				453E43B62A6DF6AB00366A25 /* Club.swift in Sources */,
+				FE1144862B87CF4800BECEA8 /* ClubCardView.swift in Sources */,
 				450C5BA72A7DC9E0005353EC /* SignUpView.swift in Sources */,
 				DEBF7C942B84710B00A82249 /* EventCardView.swift in Sources */,
 				453E43B22A6DF52000366A25 /* User.swift in Sources */,
