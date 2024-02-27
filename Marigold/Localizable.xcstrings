@@ -4,6 +4,33 @@
     "" : {
 
     },
+    "__Black Students Board__\nThe pursuit of culture is not really attained. It must be cultivated with strength, creativity, and unity." : {
+
+    },
+    "__Cycling Club__\nRecreational sports club dedicated to students interested in cycling at NC State." : {
+
+    },
+    "__Pack Bionics__\nStudent organization at NC State focused on the design and control of prosthetic limbs." : {
+
+    },
+    "__Student Government__\nOrganization dedicated to attempting to better the the student experience at NC State by functioning as an advocacy group." : {
+
+    },
+    "__Swim Club__\nRecreational sports club dedicated to students interested in swim at NC State." : {
+
+    },
+    "__University Activities Board__\nThe University Activity Board puts on programs with endless and ever-changing topics." : {
+
+    },
+    "**NC STATE**" : {
+
+    },
+    "**Your Clubs**" : {
+
+    },
+    "%@" : {
+
+    },
     "%@ %@" : {
       "localizations" : {
         "en" : {
@@ -20,10 +47,13 @@
     "Clubs" : {
 
     },
-    "Confirm Password" : {
+    "Create Account" : {
 
     },
-    "Create Account" : {
+    "Create Event" : {
+
+    },
+    "Create Post" : {
 
     },
     "Delete Account" : {
@@ -56,6 +86,9 @@
     "First Name: " : {
 
     },
+    "Hello, World!" : {
+
+    },
     "Hey" : {
 
     },
@@ -65,6 +98,10 @@
     "Keep Account" : {
 
     },
+    "LEAVE" : {
+
+    },
+    "Memberships" : {
     "Marigold @" : {
 
     },

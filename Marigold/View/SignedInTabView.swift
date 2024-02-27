@@ -15,12 +15,12 @@ struct SignedInTabView: View {
                     Label("Home", systemImage: "house")
                 }
             
-            Text("Search")
+            ExploreView()
                 .tabItem {
                     Label("Search", systemImage: "magnifyingglass")
                 }
             
-            Text("Clubs")
+            HomeView()
                 .tabItem {
                     Label("Clubs", systemImage: "person.3")
                 }
