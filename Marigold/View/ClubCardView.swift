@@ -29,7 +29,7 @@ struct ClubCardView: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: 26, height: 26)
-                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                    .clipShape(Circle())
                     .padding([.leading], 6.0)
                     .padding([.top], 8.0)
                     .clipped()
@@ -53,7 +53,7 @@ struct ClubCardView: View {
                         // Create Event Button
                         Button(action: {}, label: {
                             Text("Create Event")
-                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                .fontWeight(.bold)
                                 .font(.system(size: 12.0))
                                 .foregroundColor(.purple)
                                 .frame(width: 104, height: 26)
